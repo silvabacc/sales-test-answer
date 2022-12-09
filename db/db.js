@@ -16,8 +16,8 @@ const sales = sequelize.define(
   'total_sales',
   {
     model_id: DataTypes.INTEGER,
-    total_revenue: DataTypes.DECIMAL,
-    total_units: DataTypes.DECIMAL,
+    revenue: DataTypes.DECIMAL,
+    units: DataTypes.DECIMAL,
   },
   {
     timestamps: false,
@@ -34,6 +34,7 @@ const phones = sequelize.define(
     brand: DataTypes.STRING,
     price: DataTypes.DECIMAL,
     country: DataTypes.STRING,
+    period: DataTypes.INTEGER,
   },
   {
     timestamps: false,
@@ -48,4 +49,5 @@ const initSql = fs.readFileSync('db/insert.sql').toString();
 
 // HOWTO run a raw query
 await sequelize.query(initSql);
-await sequelize.query('select * from phones');
+// const [result] = await sequelize.query('select * from total_sales');
+// console.log(result);
