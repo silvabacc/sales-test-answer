@@ -1,5 +1,6 @@
 import express from 'express';
 import '../db/db.js';
+import salesRoutes from './salesRoutes.js';
 
 const app = express();
 app.use(express.json());
@@ -22,3 +23,4 @@ app.listen(PORT, () =>
  */
 
 app.get('/', (_req, res) => res.send('This is a nodejs service'));
+app.use('/sales', salesRoutes);
