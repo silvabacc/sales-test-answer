@@ -4,7 +4,7 @@ class SalesController {
   async getSales() {
     // HOWTO run a raw query
     console.log('here');
-    const [result] = await sequelize.query('Select * from phones');
+    const [result] = await sequelize.query('select * from phones');
     console.log(result);
   }
 }
