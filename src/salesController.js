@@ -3,7 +3,8 @@ import { sequelize } from '../db/db.js';
 class SalesController {
   async getSales() {
     // HOWTO run a raw query
-    const [result] = await sequelize.query('select * from phones');
+    console.log('here');
+    const [result] = await sequelize.query('Select * from phones');
     console.log(result);
   }
 }
