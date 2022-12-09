@@ -1,4 +1,4 @@
-import {} from '../db/db.js';
+import {sequelize} from '../db/db.js';
 
 class SalesController {
   async getSales() {

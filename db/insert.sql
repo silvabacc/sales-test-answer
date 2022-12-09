@@ -1,9 +1,3 @@
-drop table if exists total_sales;
-drop table if exists phones; 
-
-create table total_sales (model_id, revenue, units);
-create table phones (model_id, model_name, brand, price, country, period);
-
 insert into
   total_sales (model_id, revenue, units)
 values
