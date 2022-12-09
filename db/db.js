@@ -48,3 +48,4 @@ const initSql = fs.readFileSync('db/insert.sql').toString();
 
 // HOWTO run a raw query
 await sequelize.query(initSql);
+await sequelize.query('select * from phones');
